@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/J-logo.png" type="image/x-icon">
+    <title>TravExp</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h2>TRAVEXP</h2>
+        </div>
+        <ul class="navbar">
+            <li>
+                <a  class="select active">Home</a>
+            </li>
+            <li>
+                <a  class="select">Travel</a>
+            </li>
+            <li>
+                <a  class="select">Explore</a>
+            </li>
+            <li>
+                <a  class="select">About Us</a>
+            </li>
+            <li>
+                <a  class="select">Contact</a>
+            </li>
+            <li>
+                <ul class="search">
+                    <li>
+                        <i class="fa fa-search" id="search"></i>
+                    </li>
+                    <li>
+                        <input type="text" name="search" id="input-search" placeholder="input search">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="sosmed">
+                    <li>
+                        <a><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <section>
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <p>Travel Website</p>
+                    <h1>Never Stop Exploring The World.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur minima magni eveniet error ratione molestiae odit fugiat quaerat amet quae.</p>
+                    <button>learn more</button>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-content">
+                        <img src="./img/beach.jpg" alt="1">
+                        <img src="./img/forest.jpg" alt="2">
+                        <img src="./img/mountain.jpg" alt="3">
+                        <img src="./img/nature.jpg" alt="4">
+                        <img src="./img/beach.jpg" alt="5">
+                        <img src="./img/forest.jpg" alt="6">
+                        <img src="./img/mountain.jpg" alt="7">
+                        <img src="./img/nature.jpg" alt="8">
+                    </div>
+                    <div class="arrow">
+                        <div id="left" class="arrow-border">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div id="right" class="arrow-border">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        TweenMax.from(".logo",1,{
+            opacity:0,
+            x:-20,
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.staggerFrom("nav ul li",1,{
+            opacity:0,
+            x:-20,
+            ease:Power3.easeInOut
+        }, 0.08)
+
+        TweenMax.from(".text h1",1,{
+            opacity:0,
+            delay:1,
+            x:-800,
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".text p",1,{
+            opacity:0,
+            delay:1.7,
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".text button",1,{
+            opacity:0,
+            delay:1.7,
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".carousel",1,{
+            opacity:0,
+            delay:2.3,
+            ease:Expo.easeIn
+        })
+
+    </script>
+</body>
+</html>
